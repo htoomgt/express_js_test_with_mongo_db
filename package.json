@@ -1,0 +1,26 @@
+{
+  "name": "express_js_restful_api_with_mongo_db",
+  "version": "1.0.0",
+  "description": "express js restful api with mongo db",
+  "main": "index.js",
+  "type" : "module",
+  "scripts": {
+    "start" : "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "express",
+    "js",
+    "mongo",
+    "db",
+    "restful",
+    "api"
+  ],
+  "author": "Htoo Maung Thait",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
