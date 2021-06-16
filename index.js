@@ -1,5 +1,7 @@
 import app from './routes/web.js'
-const port = 3000;
+import dotenv from 'dotenv';
+dotenv.config();
+const port = process.env.DEV_PORT;
 
 
 
