@@ -1,25 +1,39 @@
-import {app} from '../app.js';
-import homeCtl from '../controllers/HomeController.js';
+var express = require('express')
+const {app} = require('../app.js');
+const homeCtl  = require('../controllers/HomeController.js');
+
+const webFrontRouter = express.Router();
+const webFrontEndLoad = require('./web.frontend');
+const apiRouter = require('./api.js');
 
 
+require('express-router-group');
 
-
-
-
-app.get('/', (req, res) => {
+webFrontRouter.get('/', (req, res) => {
     homeCtl.landingPage(req, res);
 })
 
-app.get('/home', (req, res) => {
+webFrontRouter.get('/home', (req, res) => {
     homeCtl.landingPage(req, res);
 })
 
-import './web.frontend.js';
 
-import  './api.people.js';
+// router.group('/api/v1', (router)=> {
+//     const apiPeople = require('./api.people.js')(router);
+//     const apiTest = require('./api.test.js')(router);
+//     router.use('/', apiPeople);
+//     router.use('/', apiTest);
+// });
+
+// router.group('/', (router) => {
+//     const webFrontend = require('./web.frontend')(router);
+//     router.use('/',webFrontend);
+// });
 
 
 
+app.use('/', webFrontRouter);
+app.use('/', webFrontEndLoad);
+app.use('/', apiRouter);
 
-
-export default app;
+module.exports = app;

@@ -1,11 +1,20 @@
-import {app} from '../app.js';
-import userCtl from '../controllers/UserController.js';
 
-app.get('/peoples/:id', (req, res) => {
-    userCtl.getPeopleById(req, res);
-})
+const express = require('express');
+const userCtl = require('../controllers/UserController.js');
+const router = express.Router();
 
-app.get('/peoples', (req, res)=> {
-    userCtl.getAllPerson(req, res);
-})
+    router.get('/peoples/:id', (req, res) => {
+        userCtl.getPeopleById(req, res);
+    })
+    
+    router.get('/peoples', (req, res)=> {
+        userCtl.getAllPerson(req, res);
+    })
+
+module.exports = router;
+
+    
+
+
+
 

@@ -1,7 +1,15 @@
-import {app} from '../app.js';
+var express = require('express');
+const router = express.Router();
 
 
-app.get('/about', (req,res) => {
+router.get('/about', (req,res) => {
     res.send("This is about us page");
 })
+
+module.exports = router;
+
+
+
+
+
 

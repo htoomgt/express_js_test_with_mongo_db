@@ -1,4 +1,4 @@
-import users from '../models/User.js';
+let users = require('../models/User.js');
 
 
 class UserController{
@@ -26,5 +26,5 @@ class UserController{
     }
 }
 
-export default new UserController();
+module.exports = new UserController();
 

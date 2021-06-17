@@ -13,3 +13,4 @@
 
 - Main referenced tutorial [link](https://www.youtube.com/watch?v=vjf774RKrLc)
 - How to use env files in app [link](https://medium.com/the-node-js-collection/making-your-node-js-work-everywhere-with-environment-variables-2da8cdf6e786)
+- Express group routes [link](https://stackoverflow.com/questions/38894102/grouping-routes-in-express)

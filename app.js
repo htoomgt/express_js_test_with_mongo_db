@@ -1,7 +1,16 @@
-import Express from "express";
+var express = require('express')
+var app = express()
+var router = express.Router()
 
-const app = new Express();
+
+
+const dotenv = require('dotenv');
 
 
 
-export {app};
+dotenv.config();
+const port = process.env.DEV_PORT;
+
+
+
+module.exports =  {app, port, router};

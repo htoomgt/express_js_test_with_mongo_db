@@ -1,7 +1,6 @@
-import app from './routes/web.js'
-import dotenv from 'dotenv';
-dotenv.config();
-const port = process.env.DEV_PORT;
+const {port} = require('./app.js');
+const app = require('./routes/index.js');
+
 
 
 
