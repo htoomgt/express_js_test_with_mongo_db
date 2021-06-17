@@ -11,6 +11,9 @@ webFrontRouter.get("/", (req, res) => {
     homeCtl.landingPage(req, res);
 });
 
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
+
 app.use("/", webFrontRouter);
 app.use("/", webRoutes);
 app.use("/", apiRoutes);

@@ -1,0 +1,28 @@
+### Request post api post request
+GET http://localhost:3000/api/v1/posts
+
+### Adding post to datbase via API
+POST http://localhost:3000/api/v1/posts
+Content-Type: application/json
+
+{
+    "title" : "The title three",
+    "description" : "This is youtube tutorial test practice development",
+    "date" : "2021-06-17"
+}
+### Get Specific Posts
+GET http://localhost:3000/api/v1/posts/60cb11b465141146441a8d3c
+
+
+### Delete Specific Posts
+DELETE http://localhost:3000/api/v1/posts/60cb09ddb926c9574c5c3497
+
+### Update a Specific Post
+PATCH http://localhost:3000/api/v1/posts/60cb11b465141146441a8d3c
+Content-Type: application/json
+
+{
+    "title" : "The title three 3.1",
+    "description" : "3.1 This is youtube tutorial test practice development",
+    "date" : "2021-06-17"
+}
