@@ -1,6 +1,5 @@
-var express = require('express')
-var app = express()
-var router = express.Router()
+var express = require('express');
+var app = express();
 
 
 
@@ -13,4 +12,4 @@ const port = process.env.DEV_PORT;
 
 
 
-module.exports =  {app, port, router};
+module.exports =  {app, port};
